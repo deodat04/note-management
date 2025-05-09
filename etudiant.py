@@ -46,3 +46,24 @@ class Etudiant:
         print(f"Sexe               : {self.__sexe}")
         print(f"Date de naissance  : {self.__date_de_naissance}")
         print(f"Lieu de naissance  : {self.__lieu_de_naissance}")
+
+
+
+# methode inscription retournant un objet etudiant
+def Inscription():
+    nom = input("Quel est votre nom ?\n")
+    prenom = input("Quel est votre prénom ?\n")
+    
+    while True:
+        sexe = input("Quel est votre sexe ? (M/m pour homme, F/f pour femme)\n")
+        if sexe.upper() in ['M', 'F']:
+            sexe = sexe.upper()
+            break
+        else:
+            print("Erreur : veuillez saisir M/m ou F/f.")
+    
+    date_de_naissance = input("Quelle est votre date de naissance ? (JJ/MM/AAAA)\n")
+    lieu_de_naissance = input("Quel est votre lieu de naissance ?\n")
+
+    E = Etudiant(nom, prenom, sexe, date_de_naissance, lieu_de_naissance)
+    return E
