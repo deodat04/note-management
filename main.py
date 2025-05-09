@@ -17,7 +17,7 @@ def save_etudiant(e):
         if conn:
             conn.close()
 
-
+## to display datas save in database
 def view_datas_database():
     try:
         conn = sqlite3.connect('etudiants.db')
